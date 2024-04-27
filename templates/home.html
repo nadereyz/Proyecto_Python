@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 <body>
-
-<div class="sidebar">
-  <button class="sidebar-button">Create a new workspace</button>
-  <button class="sidebar-button">Delete old workspaces</button>
-  <div class="functions">
-    <button class="function-button">Funcion 1 (añadir)</button>
-    <a>*modificar la funcion que sea desplegable o que ofrece mas opciones por ejemplo:</a> <br>
-    <a>click funcion 1 y te aparece varios opciones como "añadir, modificar, leer, eliminar"*</a>
-    <button class="function-button">Funcion 2 (modificar)</button>
-    <button class="function-button">Funcion 3 (leer)</button>
-    <button class="function-button">Funcion 4 ()</button>
-    <button class="function-button">Funcion 5 ()</button>
-    <button class="function-button">Funcion 6 (eliminar)</button>
-  </div>
-</div>
-
-<div class="workspace-container">
-  <div class="workspace">
-    <!--<img src="{{ url_for('static', filename='images/python-logo.png') }}" alt="Workspace curso Python">    Si no quito esto, la imagen se ocupa toda la pantalla no se pq.-->
-    <span>Python en curso...</span>
-  </div>
-</div>
-
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="columna">
+                <a href="{{ url_for('workspace') }}" class="sidebar-link">
+                    <button class="sidebar-button">Crear un nuevo espacio de trabajo</button>
+                </a>
+                <button class="sidebar-button">Eliminar espacios de trabajo antiguos</button>
+                <button class="function-button">Función 1</button>
+                <button class="function-button">Función 2</button>
+                <button class="function-button">Función 3</button>
+                <button class="function-button">Función 4</button>
+                <button class="function-button">Función 5</button>
+                <button class="function-button">Función 6</button>
+                <button class="function-button">Cerrar sesión</button> 
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/python-logo.png') }}" alt="Workspace curso Python" class="workspace-image">
+    </div>
 </body>
 </html>

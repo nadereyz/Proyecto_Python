@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ... Contenido previo ... -->
+    
+    <!-- Aquí agregas la tabla de tareas no completadas -->
+    <table>
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Fecha de entrega</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tarea in tareas_no_completadas.itertuples() %}
+            <tr>
+                <td>{{ tarea.Tarea }}</td>
+                <td>{{ tarea.Fecha_de_entrega }}</td>
+                <td>{{ 'No Completada' if not tarea.Completada else 'Completada' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <!-- ... Contenido posterior ... -->
+</body>
+</html>

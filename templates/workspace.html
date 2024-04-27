@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/workspace.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/python-logo.png') }}" alt="Workspace curso Python" class="workspace-image">
+    <div class="main-container">
+        <button class="sidebar-button">Nombre Proyecto</button>
+        <input type="text" class="caja" placeholder="Nombre proyecto *PRUEBA*">
+        <button class="sidebar-button">Invitar Pryecto</button>
+        <button class="function-button">volumen Proyecto</button>
+        <button class="function-button">Exportar a PDF</button>
+    </div>
+</body>
+</html>
