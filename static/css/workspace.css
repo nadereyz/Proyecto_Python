@@ -1,0 +1,57 @@
+/* home.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("{{ url_for('static', filename='images/cuadro.jpg') }}");
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+  
+  .sidebar-button,
+  .function-button {
+    background-color: #1284e1;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%; 
+  }
+  
+  .workspace-image {
+    width: 100px; 
+    height: auto;
+  }
+
+  .main-container{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 40%;
+    height: 12rem;
+  }
+
+
+
+
+  
+  
+  /*
+  
+  asrafs
+  
+  */
+  
+  
+  
+    
+  
+   
+  
+  
+  

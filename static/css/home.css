@@ -1,64 +1,58 @@
 /* home.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4; /* o el color de fondo que prefieras */
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea al principio para que la barra lateral empiece desde arriba */
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  display: flex; /* Hace que la sidebar sea un contenedor flex */
+  flex-direction: column; /* Coloca los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 20px;
+  width: 250px; /* Ajusta según el ancho deseado para la barra lateral */
+
+}
+
+.sidebar-button,
+.function-button {
+  background-color: #1284e1;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%; /* Hace que los botones ocupen todo el ancho disponible de la barra lateral */
+}
+
+.workspace-image {
+  width: 100px; /* Ajusta esto según el tamaño deseado para la imagen */
+  height: auto;
+  margin-right: 20px; /* Espacio entre la imagen y la barra lateral */
+}
+
+.main-container {
+  display: flex;
+  align-items: start; /* Alinea los elementos al inicio verticalmente */
+}
+
+
+/*
+
+asrafs
+
+*/
+
+
+
   
-  .sidebar {
-    background-color: #eee; /* o el color que prefieras */
-    padding: 15px;
-    margin-bottom: 20px; /* Espacio debajo de la barra lateral */
-  }
-  
-  .sidebar-button {
-    display: block;
-    background-color: #333; /* o el color que prefieras */
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .main-content {
-    padding: 20px;
-    width: 100%; /* O el ancho que prefieras */
-    max-width: 800px; /* O un ancho máximo que prefieras */
-  }
-  
-  .workspace-info {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px; /* Redondez de los bordes del contenedor de información */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column; /* Los elementos se apilan verticalmente */
-    align-items: center; /* Alinea los elementos al centro */
-    margin-bottom: 20px; /* Espacio debajo del contenedor de información */
-  }
-  
-  .workspace-image {
-    max-width: 100px; /* Ajusta este valor al tamaño deseado */
-    height: auto; /* Esto mantendrá la proporción de la imagen */
-  }
-  
-  
-  .function-button {
-    background-color: #007bff; /* o el color que prefieras */
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%; /* Hace que los botones ocupen todo el ancho disponible */
-  }
-  
+
+ 
+
+
