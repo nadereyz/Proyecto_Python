@@ -12,30 +12,33 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-size: 222px; 
 }
 
 .sidebar {
-  display: flex; /* Hace que la sidebar sea un contenedor flex */
-  flex-direction: column; /* Coloca los elementos verticalmente */
-  align-items: center; /* Centra los elementos horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  width: 250px; /* Ajusta según el ancho deseado para la barra lateral */
-
+  width: 300px; /* Aumentado de 250px a 300px */
 }
+
 
 .sidebar-button,
 .function-button {
   background-color: #1284e1;
   color: white;
-  padding: 10px;
+  padding: 15px; /* Aumentado de 10px a 15px */
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
-  width: 100%; /* Hace que los botones ocupen todo el ancho disponible de la barra lateral */
+  width: 100%;
+  font-size: 16px; /* Fuente más grande para mejorar la legibilidad */
 }
 
+
 .workspace-image {
-  width: 100px; /* Ajusta esto según el tamaño deseado para la imagen */
+  width: 150px; /* Ajusta esto según el tamaño deseado para la imagen */
   height: auto;
   margin-right: 20px; /* Espacio entre la imagen y la barra lateral */
 }
@@ -43,14 +46,9 @@ body {
 .main-container {
   display: flex;
   align-items: start; /* Alinea los elementos al inicio verticalmente */
+  font-size: 14px; 
 }
 
-
-/*
-
-asrafs
-
-*/
 
 
 
