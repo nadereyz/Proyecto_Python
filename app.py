@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import pandas as pd
 from db import db, init_db
+from sqlalchemy import Enum
+
 
 app = Flask(__name__)
 
@@ -9,11 +11,11 @@ init_db(app)
 
 
 
-# Modelo de datos para tareas
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     description = db.Column(db.String(200))
+    status = db.Column(Enum('Nueva', 'En progreso', 'Finalizado', name="status"), default='Nueva', nullable=False)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -68,11 +70,11 @@ def workspace_name(workspace_name):
 def add_task():
     title = request.form.get('title')
     description = request.form.get('description')
-    if title and description:  # Asegurarse de que ambos campos no estén vacíos
-        new_task = Task(title=title, description=description)
+    if title and description:
+        new_task = Task(title=title, description=description, status="Nueva")
         db.session.add(new_task)
         db.session.commit()
-    return redirect(url_for('workspace'))  # Redirigir de nuevo a la página principal
+    return redirect(url_for('workspace'))
 
 
 
