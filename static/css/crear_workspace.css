@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Asegura que el contenido empiece desde la parte superior */
+  background-image: url('/static/images/cuadro.jpg'); /* Ajusta la ruta según la estructura de tus carpetas */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.workspace-image {
+  width: 230px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin-top: 230px; /* Espacio desde la parte superior de la página */
+}
+
+.main-container {
+  width: 100%; /* Toma todo el ancho disponible */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 20px;
+}
+
+.sidebar-button, .function-button {
+  width: 100%; /* Ocupa todo el ancho de la barra lateral */
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #1284e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  width: 108%; /* Ocupa todo el ancho de la barra lateral */
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #1284e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.function-button::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; 
+}
