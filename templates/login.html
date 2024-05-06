@@ -13,8 +13,12 @@
         <input type="password" placeholder="Contraseña" name="password" required>
         <button type="submit">Entrar</button>
         <div class="options">
-            <button type="button">Crear cuenta</button>
+            <a href="{{ url_for('registrar') }}" class="sidebar-link">
+                <button type="button">Crear cuenta</button>
+            </a>
+            <a href="{{ url_for('recuperar') }}" class="sidebar-link">
             <button type="button">Contraseña perdida</button>      
+            </a>
         </div>
     </form>
 </div>

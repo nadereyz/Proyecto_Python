@@ -2,18 +2,46 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/workspace.css') }}">
+    <title>Notas</title>
+    <link rel="stylesheet" href="static/css/workspace.css">
 </head>
 <body>
-    <img src="{{ url_for('static', filename='images/python-logo.png') }}" alt="Workspace curso Python" class="workspace-image">
-    <div class="main-container">
-        <button class="sidebar-button">Nombre Proyecto</button>
-        <input type="text" class="caja" placeholder="Nombre proyecto *PRUEBA*">
-        <button class="sidebar-button">Invitar Pryecto</button>
-        <button class="function-button">volumen Proyecto</button>
-        <button class="function-button">Exportar a PDF</button>
+    <div class="container">
+        <div class="ventana">
+            <h1>{{ workspace_name }}</h1>
+        </div>
     </div>
+    <div class="books-container">
+        <div class="book" style="background-color: aqua;">
+            <form action="/add_task" method="post">
+                <input type="text" name="title" placeholder="Title of task" required>
+                <input type="text" name="description" placeholder="Description of task" required>
+                <button type="submit">Add Task</button>
+            </form>
+            {% for task in tasks %}
+            <div>
+                <p>{{ task.title }} - {{ task.description }}</p>
+                <form action="/delete_task/{{ task.id }}" method="post">
+                    <button type="submit">Delete Task</button>
+                </form>
+            </div>
+            {% endfor %}
+
+            <div class="cover">
+                <p>Tasks</p>
+            </div>
+        </div>
+        <div class="book1" style="background-color: yellow;">
+            <div class="cover">
+                <p>In Process</p>
+            </div>
+        </div>
+        <div class="book2" style="background-color: chocolate;">
+            <div class="cover">
+                <p>Finalized</p>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/workspace.js"></script>
 </body>
 </html>
